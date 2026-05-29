@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Typography from "./Typography";
 import "./DetailsSection.css";
-import signature from "../assets/images/hero/logo.png"
+import signature from "../assets/images/hero/Logo.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
