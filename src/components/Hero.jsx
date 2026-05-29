@@ -4,10 +4,10 @@ import './Hero.css';
 
 // Hero Assets
 import heroLogo from '../assets/images/hero/hero_GM_Signature.png';
-import earImg from '../assets/images/hero/Hero_img3.jpeg';
+import earImg from '../assets/images/hero/hero_img3.jpeg';
 import braceletImg from '../assets/images/hero/hero_img1.jpeg';
-import necklesImg from '../assets/images/hero/Hero_img4.jpeg';
-import pendantImg from '../assets/images/hero/Hero_img2.jpeg';
+import necklesImg from '../assets/images/hero/hero_img4.jpeg';
+import pendantImg from '../assets/images/hero/hero_img2.jpeg';
 import whatsapp from '../assets/images/whatsapp.png'; 
 
 // Side logo
