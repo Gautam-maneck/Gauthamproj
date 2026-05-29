@@ -1,0 +1,223 @@
+.faq-section {
+    padding: 4rem 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.faq-title {
+    font-size: clamp(3rem, 5vw, 4.5rem) !important;
+    letter-spacing: 12px;
+    margin-bottom: 1.5rem;
+    color: #231F20;
+}
+
+.faq-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.faq-subtitle strong {
+    color: #231F20;
+    font-weight: 600;
+}
+
+.faq-container {
+    max-width: 1320px;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: start;
+    /* CRITICAL for sticky to work correctly */
+}
+
+/* LEFT SIDE - STICKY */
+.faq-left {
+    position: sticky;
+    top: 120px;
+    /* Offset from the top of the viewport when scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-images {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 3rem;
+}
+
+.faq-img-portrait {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 140px 140px 16px 16px;
+    /* Arch shape */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.faq-img-rings {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 8px solid #ffffff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.faq-left-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem) !important;
+    letter-spacing: 4px;
+    color: #231F20;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* RIGHT SIDE - ACCORDIONS */
+.faq-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid #f0f0f0;
+}
+
+.faq-question-row {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-num {
+    font-size: 0.95rem;
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+    width: 60px;
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+.faq-question {
+    font-size: 1.05rem;
+    color: #231F20;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    flex-grow: 1;
+    margin: 0;
+    padding-right: 2rem;
+    transition: color 0.3s ease;
+}
+
+.faq-question.active {
+    font-weight: 600;
+}
+
+.faq-question-row:hover .faq-question {
+    color: #df693c;
+    /* Subtle brand color on hover */
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    color: #231F20;
+    font-weight: 400;
+    width: 20px;
+    text-align: center;
+    font-family: monospace;
+    /* Clean cross/plus */
+}
+
+.faq-answer-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+}
+
+.faq-answer-wrapper.open {
+    grid-template-rows: 1fr;
+}
+
+.faq-answer {
+    overflow: hidden;
+    padding-left: 60px;
+    /* Align text skipping the number column */
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .faq-container {
+        display: block;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        width: 100% !important;
+    }
+
+    .faq-left {
+        position: relative;
+        /* Disable sticky on tablet/mobile */
+        top: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .faq-images {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .faq-img-portrait {
+        position: relative;
+        left: -40px;
+    }
+
+    .faq-img-rings {
+        right: auto;
+        left: 50%;
+        margin-left: -50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-images {
+        transform: scale(0.85);
+        min-height: 300px;
+    }
+
+    .faq-title {
+        letter-spacing: 6px;
+    }
+
+    .faq-answer {
+        padding-left: 0;
+    }
+
+    .faq-num {
+        width: 40px;
+    }
+}

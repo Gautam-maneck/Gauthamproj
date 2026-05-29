@@ -1,0 +1,46 @@
+.splash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.left-panel {
+  left: 0;
+}
+
+.right-panel {
+  right: 0;
+}
+
+.logo-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-logo {
+  width: 90%;
+  max-width: 752px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.05));
+}

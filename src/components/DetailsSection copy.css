@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap');
+
+/* ─────────────────────────────────────────────
+   CONTAINER
+───────────────────────────────────────────── */
+.details {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #FAFAFA;
+}
+
+/* Horizontal track — GSAP translates this */
+.scroll-wrapper {
+    display: flex;
+    height: 100%;
+    will-change: transform;
+}
+
+/* ─────────────────────────────────────────────
+   WIDE CANVAS  (~1700 px total)
+───────────────────────────────────────────── */
+.canvas {
+    display: flex;
+    flex-direction: column;
+    width: 1700px;
+    /* total canvas width */
+    height: 100%;
+    padding: 0px 100px 72px 100px;
+    flex-shrink: 0;
+    gap: 0;
+}
+
+/* ── TOP ROW: title (left) + pull-quote (right) */
+.canvas-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 44px 0px 44px 0px;
+    background: #fafafa;
+}
+
+.main-title {
+    font-size: 64px !important;
+    font-weight: 800 !important;
+    letter-spacing: 4px !important;
+    line-height: 1.05 !important;
+    color: #0c1928 !important;
+    text-transform: uppercase;
+    max-width: 860px;
+    margin: 0 !important;
+}
+
+.right-quote {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #5c5c5c;
+    max-width: 210px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+/* ── BOTTOM ROW: four content columns */
+.canvas-content {
+    display: flex;
+    gap: 68px;
+    flex: 1;
+    align-items: flex-start;
+}
+
+/* ─────────────────────────────────────────────
+   COLUMNS
+───────────────────────────────────────────── */
+
+/* Col 1 — narrow left */
+.col-1 {
+    width: 380px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Col 2 — wide center */
+.col-2 {
+    width: 528px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Col 3 — signature + body copy */
+.col-3 {
+    width: 348px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Col 4 — narrow right (craftsman image, quote already in top row) */
+.col-4 {
+    width: 348px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* ─────────────────────────────────────────────
+   SIGNATURE
+───────────────────────────────────────────── */
+.signature-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 46px;
+    color: #0c1928;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.signature-line {
+    display: block;
+    flex: 1;
+    max-width: 72px;
+    height: 1.5px;
+    background-color: #0c1928;
+    margin-top: 4px;
+}
+
+/* ─────────────────────────────────────────────
+   IMAGES
+───────────────────────────────────────────── */
+.img {
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Col-1: jewelry / earrings shot — terracotta vibe */
+.img-jewelry {
+    width: 220px;
+    height: 360px;
+    background-image: url("../assets/images/details4.png");
+}
+
+/* Col-2: wide diamond ring shot */
+.img-diamond {
+    width: 420px;
+    height: 360px;
+    background-image: url("../assets/images/details2.png");
+}
+
+/* Col-4: craftsman hands */
+.img-craftsman {
+    width: 210px;
+    height: 330px;
+    background-image: url("../assets/images/details3.png");
+}
+
+/* ─────────────────────────────────────────────
+   DETAIL TEXT
+───────────────────────────────────────────── */
+.dt {
+    font-size: 13.5px;
+    line-height: 1.78;
+    color: #5c5c5c;
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+}
+
+.dt strong {
+    font-weight: 700;
+    color: #0c1928;
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE SAFEGUARD
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 32px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .canvas {
+        padding: 40px;
+    }
+}

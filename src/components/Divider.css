@@ -1,0 +1,28 @@
+.section-divider {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.divider-container {
+    max-width: 1320px;
+    width: calc(100% - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .section-divider {
+        padding: 1rem 0;
+    }
+}

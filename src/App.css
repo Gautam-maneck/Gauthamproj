@@ -1,0 +1,119 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* 
+html,
+body,
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+} */
+body{
+    margin: 0px;
+}
+
+
+.helix-wrapper {
+    padding: 8rem 0;
+    /* 🔥 top & bottom spacing */
+}
+
+.helix-section {
+    height: 250vh;
+    width: 100%;
+    background: #fff;
+}
+
+.helix-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helix-scene {
+    width: 800px;
+    height: 600px;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helix {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) scale(1.05, 1.02) rotateY(0deg);
+}
+
+.helix .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 320px;
+    margin-left: -120px;
+    margin-top: -160px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.helix .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* helix positions */
+.helix .card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(320px) translateY(-180px);
+}
+
+.helix .card:nth-child(2) {
+    transform: rotateY(72deg) translateZ(320px) translateY(-90px);
+}
+
+.helix .card:nth-child(3) {
+    transform: rotateY(144deg) translateZ(320px) translateY(0px);
+}
+
+.helix .card:nth-child(4) {
+    transform: rotateY(216deg) translateZ(320px) translateY(90px);
+}
+
+.helix .card:nth-child(5) {
+    transform: rotateY(288deg) translateZ(320px) translateY(180px);
+}
+
+.helix-header {
+    text-align: center;
+    /* padding: 4rem 0 2rem; */
+}
+
+.helix-header h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    color: #231F20;
+    margin-bottom: 0px;
+    font-weight: 400;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.helix-header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #231F20;
+    letter-spacing: 2%;
+    font-weight: 400;
+}

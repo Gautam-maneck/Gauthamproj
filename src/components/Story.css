@@ -1,0 +1,119 @@
+.story-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.story-container {
+    max-width: 1320px;
+    width: calc(100% - 4rem);
+    display: flex;
+    align-items: start;
+    gap: 6rem;
+    margin: 0 auto;
+}
+
+.story-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+.story-right {
+    flex: 1.8;
+}
+
+.story-heading {
+    font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: #231F20;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+}
+
+.story-content p {
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    line-height: 1.8;
+    color: #444;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.story-highlight {
+    font-weight: 500;
+    color: #231F20;
+}
+
+.read-more {
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+    /* margin-left: 0.5rem; */
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.read-more:hover {
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .story-container {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-section {
+        padding: 5rem 0;
+    }
+
+    .story-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .story-logo {
+        max-width: 350px;
+    }
+
+    .story-heading {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-logo {
+        max-width: 280px;
+    }
+
+    .story-heading {
+        font-size: 1.6rem;
+    }
+    .story-section {
+        padding: 0rem 0;
+    }
+}

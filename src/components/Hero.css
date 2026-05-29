@@ -1,0 +1,471 @@
+/* ═══════════════════════════════════════════════════
+   Hero Section — Full-width, White-based Theme
+   ═══════════════════════════════════════════════════ */
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    /* min-height: 100vh; */
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0 0;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+
+/* ─── Top Navigation ─── */
+.hero-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.hero-nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-nav__item {
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: #333;
+    /* text-transform: uppercase; */
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hero-nav__item:hover {
+    color: #000;
+}
+
+.hero-nav__dot {
+    color: #bbb;
+    font-size: 0.7rem;
+    user-select: none;
+}
+
+/* ─── Signature Logo ─── */
+.hero-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.hero-logo__img {
+    width: clamp(280px, 40vw, 560px);
+    height: auto;
+    object-fit: contain;
+}
+
+/* ─── Tagline ─── */
+.hero-tagline {
+    text-align: center;
+    font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+    font-weight: 400;
+    color: #666;
+    line-height: 1.75;
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+    letter-spacing: 0.2px;
+}
+
+/* ─── Image Gallery ─── */
+.hero-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.hero-gallery__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    /* aspect-ratio: 1 / 1; */
+    cursor: pointer;
+    background: #f5f5f3;
+    max-height: 280px;
+}
+
+.hero-gallery__item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.06) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hero-gallery__item:hover::after {
+    opacity: 1;
+}
+
+.hero-gallery__item:hover .hero-gallery__img {
+    transform: scale(1.05);
+}
+
+.hero-gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ─── Sidebar (Desktop Only) ─── */
+.hero-sidebar {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 100;
+}
+
+/* Card containing logo + menu */
+.hero-sidebar__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.hero-sidebar__logo img {
+    width: 80px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.hero-sidebar__logo img:hover {
+    opacity: 1;
+}
+
+.hero-sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-sidebar__link {
+    all: unset;
+    font-size: 0.65rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #aaa;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: end;
+    justify-content: end;
+    width: 80px;
+}
+
+.hero-sidebar__link:hover,
+.hero-sidebar__link.active {
+    color: #111;
+}
+
+.hero-sidebar__bullet {
+    font-size: 0.4rem;
+}
+
+/* Separate card for social icons */
+.hero-sidebar__socials-card {
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.hero-sidebar__social {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-sidebar__social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-sidebar__social--whatsapp {
+    /* background: #25D366; */
+    color: white;
+}
+
+.hero-sidebar__social--phone {
+    background: #111;
+    color: white;
+}
+
+/* ═══════════════════════════════════════════════════
+   Responsive Breakpoints
+   ═══════════════════════════════════════════════════ */
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+    .hero-sidebar {
+        /* display: none; */
+    }
+
+    .hero-gallery {
+        gap: 0.75rem;
+        padding: 0 2vw;
+    }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 2rem;
+    }
+
+    .hero-nav__list {
+        gap: 0.5rem 0.8rem;
+    }
+
+    .hero-nav__item {
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-tagline {
+        margin-bottom: 2rem;
+    }
+
+    .hero-tagline__br {
+        display: none;
+    }
+
+    .hero-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        padding: 0 1rem;
+    }
+
+    .hero-gallery__item {
+        aspect-ratio: 1 / 1;
+        border-radius: 6px;
+        max-height: 380px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 1.5rem;
+    }
+
+    .hero-nav__list {
+        gap: 0.3rem 0.6rem;
+    }
+
+    .hero-nav__item {
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-nav__dot {
+        font-size: 0.5rem;
+    }
+
+    .hero-logo__img {
+        width: clamp(220px, 70vw, 320px);
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        padding: 0 0.75rem;
+    }
+
+    .hero-gallery__item {
+        border-radius: 6px;
+        max-height: 180px;
+    }
+}
+/* =========================================================
+   MOBILE BOTTOM NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Hide desktop sidebar positioning */
+    .hero-sidebar {
+        position: fixed !important;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        top: auto !important;
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 9999;
+
+        pointer-events: none;
+    }
+
+    /* Main bottom nav card */
+    .hero-sidebar__card {
+        pointer-events: auto;
+
+        /* width: calc(100% - 58px); */
+        max-width: 420px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 12px 18px;
+
+        border-radius: 999px;
+
+        background: rgba(255,255,255,0.92);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        box-shadow:
+            0 10px 40px rgba(0,0,0,0.12),
+            inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+
+    /* Hide big logo in mobile */
+    .hero-sidebar__logo {
+        display: none;
+    }
+
+    /* Menu */
+    .hero-sidebar__menu {
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Buttons */
+    .hero-sidebar__link {
+        flex: 1;
+
+        border: none;
+        background: transparent;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        padding: 10px 8px;
+
+        border-radius: 999px;
+
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        color: #555;
+
+        transition: all 0.3s ease;
+    }
+
+    /* Active state */
+    .hero-sidebar__link.active {
+        background: #111;
+        color: #fff;
+    }
+
+    /* Hide bullet */
+    .hero-sidebar__bullet {
+        display: none;
+    }
+
+    /* Social floating button */
+    .hero-sidebar__socials-card {
+        position: fixed;
+        right: 20px;
+        bottom: 95px;
+
+        width: 56px;
+        height: 56px;
+
+        border-radius: 50%;
+
+        background: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.15);
+
+        z-index: 9999;
+        padding: 0px;
+    }
+
+    .hero-sidebar__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-sidebar__social svg {
+        width: 28px;
+        height: 28px;
+    }
+}

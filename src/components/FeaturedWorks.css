@@ -1,0 +1,564 @@
+/* FULL WIDTH BASE */
+.featured {
+    width: 100%;
+    background: #1f2a44;
+    color: #fff;
+}
+
+/* HEADER */
+.header-wrap {
+    padding: 100px 80px 40px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3.5rem !important;
+    letter-spacing: 6px;
+}
+
+.hignlights-subtitle{
+    margin-top: 8px !important;
+    max-width: 528px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-weight: 400;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    letter-spacing: 2% !important;
+}
+.subtitle {
+    max-width: 528px !important;
+    margin-top: 12px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-weight: 400;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    letter-spacing: 2% !important;
+}
+.subtitle strong {
+    color: #fff;
+}
+
+/* TOP SECTION (EDGE TO EDGE) */
+.top-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 102px;
+    padding: 0 0px 100px;
+}
+
+/* BLOCKS */
+.left-block,
+.right-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* IMAGES */
+.img {
+    width: 100%;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-left {
+    height: 520px;
+    background-image: url("../assets/images/high/h_img7.png");
+}
+
+.img-right {
+    height: 300px;
+    background-image: url("../assets/images/featured_image.png");
+}
+
+/* TEXT */
+.text-block {
+    max-width: 600px;
+    margin-left: auto;
+}
+
+/* HIGHLIGHTS */
+.highlights {
+    color: #fff;
+    background: #1f2a44;
+}
+
+/* HEADER CENTER */
+.highlight-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* MASONRY GRID */
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    gap: 0;
+}
+
+/* ITEMS */
+.item {
+    background-size: cover;
+    background-position: center;
+}
+
+/* SIZE VARIANTS */
+.tall {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.square {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.large {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+/* IMAGES */
+.item:nth-child(1) {
+    background-image: url("../assets/images/high/h_img1.png");
+}
+
+.item:nth-child(2) {
+    background-image: url("../assets/images/high/h_img2.png");
+}
+
+.item:nth-child(3) {
+    background-image: url("../assets/images/high/h_img3.png");
+    background-size: 100% 100%;
+}
+
+.item:nth-child(4) {
+    background-image: url("../assets/images/high/h_img4.png");
+}
+
+.item:nth-child(5) {
+    background-image: url("../assets/images/high/h_img5.png");
+}
+
+.item:nth-child(6) {
+    background-image: url("../assets/images/high/h_img6.png");
+}
+
+.item:nth-child(7) {
+    background-image: url("../assets/images/high/h_img7.png");
+}
+
+.item:nth-child(8) {
+    background-image: url("../assets/images/high/h_img8.png");
+}
+
+.item:nth-child(9) {
+    background-image: url("../assets/images/high/h_img9.png");
+}
+
+.item:nth-child(10) {
+    background-image: url("../assets/images/high/h_img10.png");
+}
+
+.item:nth-child(11) {
+    background-image: url("../assets/images/high/h_img11.png");
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .top-section {
+        grid-template-columns: 1fr;
+        padding: 0px 20px 80px;
+    }
+
+    .header-wrap {
+        padding: 20px 20px 20px;
+    }
+
+    .masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 28px !important;
+    }
+
+    .masonry {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── HIGHLIGHTS MASONRY (Desktop ≥1024px) ─────────────── */
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    /* gap: 12px; */
+}
+
+/* Tall = 1 col × 2 rows */
+.item.tall {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Wide = 2 cols × 1 row */
+.item.wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Large = 2 cols × 2 rows */
+.item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Base item style */
+.item {
+    background-color: #f0ede8;
+    /* border-radius: 12px; */
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+/* ── SLIDER WRAPPER (hidden on desktop) ──────────────── */
+.highlights-slider-wrapper {
+    display: none;
+}
+
+/* ── MOBILE SLIDER (< 1024px) ─────────────────────────── */
+@media (max-width: 1023px) {
+
+    /* Hide the masonry grid */
+    .masonry {
+        display: none;
+    }
+
+    /* Show the slider wrapper */
+    .highlights-slider-wrapper {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .highlights-slider-track {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+        cursor: grab;
+    }
+
+    .highlights-slider-track:active {
+        cursor: grabbing;
+    }
+
+    .highlights-slider-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .highlights-slide {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #f0ede8;
+    }
+
+    .highlights-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        pointer-events: none;
+    }
+
+    /* Dots */
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        margin-top: 20px;
+    }
+
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #d0cbc4;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .slider-dot.active {
+        background-color: #231F20;
+        width: 20px;
+        border-radius: 3px;
+    }
+
+    /* Tablet: 2.3 items visible */
+    .highlights-slide {
+        width: calc((100% - 12px) / 2.3);
+        height: 340px;
+    }
+}
+
+/* Phablet: 1.7 items visible */
+@media (max-width: 767px) {
+    .highlights-slide {
+        width: calc((100% - 12px) / 1.7);
+        height: 300px;
+    }
+}
+
+/* Mobile: 1.2 items visible (peek effect) */
+@media (max-width: 480px) {
+    .highlights-slide {
+        width: calc((100% - 12px) / 1.2);
+        height: 260px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   HIGHLIGHTS SECTION
+   Desktop : Explicit masonry grid (pixel-perfect)
+   Mobile  : Horizontal snap-scroll slider
+═══════════════════════════════════════════════════════ */
+
+/* ── BASE ITEM ──────────────────────────────────────── */
+.item {
+    background-color: #e8e3dc;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+/* ══════════════════════════════════════════════════════
+   DESKTOP MASONRY (≥ 1024px)
+   5-row explicit grid matching the reference image:
+
+   Row 1 (260px) ┐
+   Row 2 (260px) ┘  Items 1, 2, 3  (tall/large)
+   Row 3 (165px)    Item 4 blueprint (wide, short)
+   Row 4 (285px)    Items 5, 6      (ear, arm — 1 row)
+   Row 5 (205px)    Items 8–11      (bottom strip)
+
+   Ruby (item 7) spans rows 3–4 in cols 3–4
+══════════════════════════════════════════════════════ */
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 260px 260px 165px 285px 205px; */
+    /* gap: 8px; */
+    width: 100%;
+}
+
+/* ── Explicit placement for every item ─────────────── */
+
+/* 1 — Pearl V-necklace: col 1, rows 1–2 */
+.masonry .item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* 2 — Round diamond necklace: col 2, rows 1–2 */
+.masonry .item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+/* 3 — Sapphire tassel necklace: cols 3–4, rows 1–2 */
+.masonry .item:nth-child(3) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 4;
+}
+
+/* 4 — Blueprint earrings: cols 1–2, row 3 only (short) */
+.masonry .item:nth-child(4) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+}
+
+/* 5 — Ear close-up: col 1, row 4 only */
+.masonry .item:nth-child(5) {
+    grid-column: 3 / 5;
+    grid-row: 4 / 7;
+}
+
+/* 6 — Arm bracelet: col 2, row 4 only */
+.masonry .item:nth-child(6) {
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+}
+
+/* 7 — Ruby necklace: cols 3–4, rows 3–4 (spans blueprint + ear rows) */
+.masonry .item:nth-child(7) {
+    grid-column: 2 / 2;
+    grid-row: 5 / 7;
+}
+
+/* 8 — Hand ring: col 1, row 5 */
+.masonry .item:nth-child(8) {
+    grid-column: 1 / 2;
+    grid-row: 9 / 7;
+}
+
+/* 9 — Yellow diamond ring: col 2, row 5 */
+.masonry .item:nth-child(9) {
+    grid-column: 2 / 3;
+    grid-row: 9 / 7;
+}
+
+/* 10 — Ribbed gold bracelet: col 3, row 5 */
+.masonry .item:nth-child(10) {
+    grid-column: 3 / 4;
+    grid-row: 9 / 7;
+}
+
+/* 11 — Two stone ring: col 4, row 5 */
+.masonry .item:nth-child(11) {
+    grid-column: 4 / 5;
+    grid-row: 9 / 7;
+}
+
+/* ── Slider wrapper hidden on desktop ───────────────── */
+.highlights-slider-wrapper {
+    display: none;
+}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE SLIDER (< 1024px)
+   Shows: 2.3 items → 1.7 → 1.2 based on breakpoint
+══════════════════════════════════════════════════════ */
+@media (max-width: 1023px) {
+
+    .masonry {
+        display: none;
+    }
+
+    .highlights-slider-wrapper {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 30px;
+    }
+
+    /* Track */
+    .highlights-slider-track {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+        cursor: grab;
+    }
+
+    .highlights-slider-track:active {
+        cursor: grabbing;
+    }
+
+    .highlights-slider-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Slides */
+    .highlights-slide {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #e8e3dc;
+        /* Tablet: 2.3 items visible */
+        width: calc((100% - 8px) / 2.3);
+        height: 360px;
+    }
+
+    .highlights-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    /* Dot navigation */
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #c8c2b8;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease, width 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .slider-dot.active {
+        background-color: #231F20;
+        width: 20px;
+        border-radius: 3px;
+    }
+}
+
+/* Phablet: 1.7 items */
+@media (max-width: 767px) {
+    .highlights-slide {
+        width: calc((100% - 8px) / 1.7);
+        height: 320px;
+    }
+}
+
+/* Mobile: 1.2 items — peek effect */
+@media (max-width: 480px) {
+    .highlights-slide {
+        width: calc((100% - 8px) / 1.2);
+        height: 280px;
+    }
+}

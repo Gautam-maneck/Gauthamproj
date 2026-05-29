@@ -1,0 +1,277 @@
+/* ===========================
+   PROCESS SECTION — Responsive
+   =========================== */
+
+.process-section {
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 80px 20px;
+    padding-top: 0px;
+}
+
+/* HEADER */
+.process-section__header {
+    max-width: 900px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+/* MAIN TITLE */
+.process-section__main-title {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TWO-COLUMN GRID: images + steps */
+.process-section__content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-section__grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* LEFT IMAGE COLUMN */
+.process-section__images {
+    border-radius: 8px;
+    padding-top: 100px;
+}
+
+.process-section__img-wrap {
+    overflow: hidden;
+}
+
+.process-section__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.process-section__img--top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.process-section__img--bottom {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* RIGHT STEPS COLUMN */
+.process-section__steps {
+    padding-top: 20px;
+}
+
+/* INDIVIDUAL STEP */
+.process-section__step {
+    display: grid;
+    grid-template-columns: 60px 140px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.process-section__step--spaced {
+    margin-bottom: 24px;
+}
+
+/* STEP NUMBER */
+.process-section__number {
+    font-size: 12px !important;
+    color: #888888 !important;
+    padding-top: 2px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* STEP TITLE */
+.process-section__step-title {
+    font-size: 12px !important;
+    letter-spacing: 1.5px !important;
+    color: #888888 !important;
+    text-transform: uppercase !important;
+    padding-top: 4px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* STEP CONTENT */
+.process-section__step-content {
+    font-size: 12px !important;
+    line-height: 1.9 !important;
+    color: #888888 !important;
+    margin: 0 !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.process-section__step-content strong {
+    color: #231F20 !important;
+    font-weight: 400 !important;
+}
+
+/* LINE DIVIDER IMAGE */
+.process-section__line-divider {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+/* HEADER TYPOGRAPHY overrides */
+.process-section__subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.process-section__desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.process-section__desc strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+
+/* ===========================
+   RESPONSIVE — Tablet
+   =========================== */
+@media (max-width: 992px) {
+    .process-section {
+        padding: 60px 20px;
+    }
+
+    .process-section__header {
+        margin-bottom: 60px;
+    }
+
+    .process-section__main-title {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+
+    .process-section__grid {
+        grid-template-columns: 300px 1fr;
+        gap: 40px;
+    }
+
+    .process-section__step {
+        grid-template-columns: 50px 120px 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* ===========================
+   RESPONSIVE — Small Tablet / Large Phone
+   =========================== */
+@media (max-width: 768px) {
+    .process-section {
+        padding: 50px 16px;
+    }
+
+    .process-section__header {
+        margin-bottom: 40px;
+    }
+
+    .process-section__main-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .process-section__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .process-section__images {
+        padding-top: 0;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .process-section__steps {
+        padding-top: 0;
+    }
+
+    .process-section__step {
+        grid-template-columns: 50px 100px 1fr;
+        gap: 16px;
+    }
+}
+
+
+/* ===========================
+   RESPONSIVE — Mobile
+   =========================== */
+@media (max-width: 480px) {
+    .process-section {
+        padding: 40px 14px;
+    }
+
+    .process-section__header {
+        margin-bottom: 30px;
+    }
+
+    .process-section__subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .process-section__desc {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .process-section__main-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .process-section__images {
+        max-width: 100%;
+    }
+
+    /* Stack number + title on top, content below */
+    .process-section__step {
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: auto auto;
+        gap: 8px 12px;
+    }
+
+    .process-section__number {
+        grid-row: 1;
+        grid-column: 1;
+        font-size: 11px;
+    }
+
+    .process-section__step-title {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 11px;
+        padding-top: 2px;
+    }
+
+    .process-section__step-content {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .process-section__line-divider {
+        margin-bottom: 16px;
+    }
+
+    .process-section__step--spaced {
+        margin-bottom: 16px;
+    }
+}
