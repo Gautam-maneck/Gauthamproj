@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/images/hero/logo.png';
+import logo from '../assets/images/hero/Logo.png';
 import './SplashScreen.css';
 
 const SplashScreen = ({ finishLoading }) => {
