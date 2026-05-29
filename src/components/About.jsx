@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutProfile from '../assets/images/about/About.jpeg';
+import aboutProfile from '../assets/images/about/about_prof.jpeg';
 
 const About = () => {
     const services = [
