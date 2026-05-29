@@ -154,7 +154,7 @@ const Hero = () => {
                 </div>
 
                 {/* ─── Separate Social Icons Card ─── */}
-                <div className="hero-sidebar__socials-card">
+                <div className="hero-sidebar__socials-card" style={{ pointerEvents: 'all' }}>
                     <a className="hero-sidebar__social hero-sidebar__social--whatsapp" href="https://wa.me/917506262812?utm_source=chatgpt.com" aria-label="WhatsApp">
                         <img src={whatsapp} alt="WhatsApp" style={{ width: '48px', height: '48px' }}/>
                     </a>
