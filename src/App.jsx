@@ -17,6 +17,7 @@ import TestimonialSection from './components/testimonial';
 import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Schema from './components/Schema';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       </AnimatePresence>
 
       <div className="container">
+        <Schema />
         <Hero />
         <About />
         <Counter />
