@@ -139,7 +139,7 @@ const Schema = () => {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __stringify: JSON.stringify(schemaData) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
     />
   );
 };
