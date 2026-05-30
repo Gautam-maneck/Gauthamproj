@@ -136,19 +136,91 @@ const Schema = () => {
 //     ]
 //   };
 
-    const schemaData = {
- "@context":"https://schema.org",
- "@type":"Organization",
- "name":"Gautam Maneck",
- "url":"https://www.gautammaneck.com",
- "logo":"https://www.gautammaneck.com/logo.png",
- "image":"https://www.gautammaneck.com/logo.png",
- "description":"Luxury handcrafted jewellery collection featuring earrings, necklaces, bracelets and premium accessories.",
- "sameAs":[
-   "https://www.instagram.com/gautammaneck",
-   "https://www.facebook.com/gautammaneck"
- ]
-};
+//     const schemaData = {
+//  "@context":"https://schema.org",
+//  "@type":"Organization",
+//  "name":"Gautam Maneck",
+//  "url":"https://www.gautammaneck.com",
+//  "logo":"https://www.gautammaneck.com/logo.png",
+//  "image":"https://www.gautammaneck.com/logo.png",
+//  "description":"Luxury handcrafted jewellery collection featuring earrings, necklaces, bracelets and premium accessories.",
+//  "sameAs":[
+//    "https://www.instagram.com/gautammaneck",
+//    "https://www.facebook.com/gautammaneck"
+//  ]
+// }
+
+const schemaData = 
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+      
+          {
+            "@type": "Organization",
+            "@id": "https://www.gautammaneck.com/#organization",
+            "name": "Gautam Maneck",
+            "url": "https://www.gautammaneck.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.gautammaneck.com/logo.png"
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://www.gautammaneck.com/logo.png"
+            },
+            "description": "Luxury handcrafted jewellery brand offering premium earrings, necklaces, bracelets and exclusive collections.",
+            "sameAs": [
+              "https://www.instagram.com/gautammaneck/",
+              "https://www.facebook.com/gautammaneck/",
+              "https://www.linkedin.com/company/gautammaneck/"
+            ]
+          },
+      
+          {
+            "@type": "Brand",
+            "@id": "https://www.gautammaneck.com/#brand",
+            "name": "Gautam Maneck",
+            "url": "https://www.gautammaneck.com/",
+            "logo": "https://www.gautammaneck.com/logo.png"
+          },
+      
+          {
+            "@type": "WebSite",
+            "@id": "https://www.gautammaneck.com/#website",
+            "url": "https://www.gautammaneck.com/",
+            "name": "Gautam Maneck",
+            "publisher": {
+              "@id": "https://www.gautammaneck.com/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.gautammaneck.com/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+      
+          {
+            "@type": "WebPage",
+            "@id": "https://www.gautammaneck.com/#webpage",
+            "url": "https://www.gautammaneck.com/",
+            "name": "Luxury Jewellery Collection | Gautam Maneck",
+            "isPartOf": {
+              "@id": "https://www.gautammaneck.com/#website"
+            },
+            "about": {
+              "@id": "https://www.gautammaneck.com/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://www.gautammaneck.com/hero_img3.jpeg"
+            },
+            "description": "Discover handcrafted luxury jewellery including earrings, necklaces, bracelets and premium collections."
+          }
+        ]
+      }
 
   return (
     <script
